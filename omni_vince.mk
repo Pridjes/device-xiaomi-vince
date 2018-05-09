@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit from mido device
+# Inherit from vince device
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
 # Inherit from Omni custom product configuration
