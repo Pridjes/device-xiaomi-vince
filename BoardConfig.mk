@@ -144,6 +144,9 @@ USE_OPENGL_RENDERER := true
 BOARD_USES_ADRENO := true
 TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
 
+# Extended Filesystem Support
+TARGET_EXFAT_DRIVER := exfat
+
 # Filesystem
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
