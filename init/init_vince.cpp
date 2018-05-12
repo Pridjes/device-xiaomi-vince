@@ -97,6 +97,7 @@ void check_device()
         heapminfree = "512k";
 	heapmaxfree = "8m";
         large_cache_height = "1024";
+   }
 }
 
 void vendor_load_properties()
