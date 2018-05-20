@@ -309,6 +309,7 @@
         <interface>
             <name>IUsb</name>
             <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.wifi</name>
