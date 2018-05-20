@@ -302,6 +302,14 @@
             <instance>default</instance>
         </interface>
     </hal>
+     <hal format="hidl">
+        <name>android.hardware.usb</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+    </hal>
     <hal format="hidl">
         <name>android.hardware.wifi</name>
         <transport>hwbinder</transport>
@@ -377,7 +385,7 @@
     <hal format="hidl">
         <name>vendor.display.config</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IDisplayConfig</name>
             <instance>default</instance>
