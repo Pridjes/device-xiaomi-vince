@@ -25,6 +25,8 @@ $(call inherit-product, device/xiaomi/vince/device.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
+PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
+
 # must be before including omni part
 TARGET_BOOTANIMATION_SIZE := 1080p
 
