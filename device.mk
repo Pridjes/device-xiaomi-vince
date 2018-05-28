@@ -117,6 +117,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
@@ -124,12 +125,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0_vendor \
     camera.device@3.2-impl \
     camera.msm8953 \
     libmm-qcamera \
-    SnapdragonCamera2 \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor
+    SnapdragonCamera2
 
 # Camera-face detection
 PRODUCT_PACKAGES += \
@@ -148,16 +149,17 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    vendor.display.config@1.1 \
+    vendor.display.config@1.1_vendor \
+    copybit.msm8953 \
     gralloc.msm8953 \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
     libdisplayconfig \
     liboverlay \
-    libqdMetaData.system \
     libgenlock \
     libtinyxml \
-    vendor.display.config@1.1 \
-    vendor.display.config@1.1_vendor
+    libqdMetaData.system
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -311,11 +313,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librmnetctl \
     libcnefeatureconfig \
-    libxml2 \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+    libxml2
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -333,11 +331,7 @@ PRODUCT_COPY_FILES += \
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
-    textclassifier.smartselection.bundle1
-
-# USB HAL
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    textclassifier.smartselection.bundle
 
 # VNDK
 PRODUCT_PACKAGES += \

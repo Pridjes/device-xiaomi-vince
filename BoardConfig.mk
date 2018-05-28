@@ -47,9 +47,11 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/vince
 TARGET_KERNEL_CONFIG := vince_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
-KBUILD_COMPILER_STRING := DragonTC 7.0
+TARGET_KERNEL_CLANG_VERSION := 7.0.2
+KBUILD_COMPILER_STRING := Android clang version 7.0.2
+#KBUILD_COMPILER_STRING := DragonTC 7.0
 export KBUILD_COMPILER_STRING
-TARGET_KERNEL_CLANG_PATH := $(ANDROID_BUILD_TOP)/prebuilts/clang/host/$(HOST_OS)-x86/dragontc-7.0/bin
+#TARGET_KERNEL_CLANG_PATH := $(ANDROID_BUILD_TOP)/prebuilts/clang/host/$(HOST_OS)-x86/dragontc-7.0/bin
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -117,7 +119,6 @@ ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
     ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
     endif
   endif
 endif
@@ -232,6 +233,7 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB 	:= lib_driver_cmd_qcwcn
 WIFI_DRIVER_FW_PATH_AP 			:= "ap"
 WIFI_DRIVER_FW_PATH_STA 		:= "sta"
 WPA_SUPPLICANT_VERSION 			:= VER_0_8_X
+WIFI_HIDL_FEATURE_AWARE			:= true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/vince/BoardConfigVendor.mk
