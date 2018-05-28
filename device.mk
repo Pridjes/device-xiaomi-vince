@@ -331,7 +331,7 @@ PRODUCT_COPY_FILES += \
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
-    textclassifier.smartselection.bundle
+    textclassifier.smartselection.bundle1
 
 # VNDK
 PRODUCT_PACKAGES += \
